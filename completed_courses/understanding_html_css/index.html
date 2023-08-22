@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume of Marissa Wilson</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#workhistory">Work History</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#mailingaddress">Mailing Address</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Resume</h1>
+            <section>
+                <p>
+                    Aspiring Web Developer
+                </p>
+                <dl>
+                    <dt>Github</dt>
+                    <dd><a href="https://github.com/marfawilson">marfawilson</a></dd>
+                    <dt>Phone</dt>
+                    <dd>512-420-6969</dd>
+                    <dt>Instagram</dt>
+                    <dd>@frenchdonut</dd>
+                </dl>
+            </section>
+        
+            <article id="aboutme">
+                <header>
+                    <h2>About Me</h2>
+                </header>
+                <p>
+                    Howdy! I'm a junior web developer living in Austin, Texas.
+                </p>
+                <aside><p><small>I'm <em>so excited</em> to be a part of this wonderful world of coding, where the learning never stops!</small></p></aside>
+                <p>Hello</p>
+                <footer>
+                    Contact Me
+                </footer>
+            </article>
+        
+            <section id="skills">
+                <h2>Skills</h2>
+                <p>
+                    HTML
+                    Markup your content with semantic HTML.
+                </p>
+                <p>
+                    CSS
+                    Layout your content visually for multiple devices.
+                </p>
+                <p>
+                    JavaScript
+                    Make your content more interactive, and build web applications.
+                </p>
+            </section>
+        
+            <section id="workhistory">
+                <h2>Work History</h2>
+                <ol>
+                    <li>Pizza Assembler, Domino's Pizza, 1 year</li>
+                    <li>Cashier, Baby's R Us, 1 year 6 months</li>
+                    <li>Team Member, Whole Foods Market, 11 years</li>
+                </ol>
+            </section>
+        
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+            </section>
+        
+            <section id="references">
+                <h2>References</h2>
+                <blockquote>
+                    <p>Marissa was a wonderful, engaging student!</p>
+                </blockquote>
+                <blockquote>
+                    <p>Marissa is <strong>a joy to work with!</strong></p>
+                </blockquote>
+                <p>- My boss</p>
+            </section>
+        
+            <section id="mailingaddress">
+                <h2>Mailing Address</h2>
+                <address>
+                    123 Maple Dr. <br>
+                    Austin, TX 77889
+                </address>
+            </section>
+
+            <section id="contactme">
+                <h2>Contact Me</h2>
+                <form action="dosomething.html" method="POST">
+                    <p>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="whycontacting">Why Contacting</label>
+                        <select id="whycontacting" name="whycontacting">
+                            <option value="jobinterview">Job Interview</option>
+                            <option value="freelancework">Freelance Work</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" rows="5"></textarea>
+                    </p>
+                    <fieldset>
+                        <legend>Best Contact Time</legend>
+                        <p>
+                            <label for="contacttime1">Morning</label>
+                            <input type="radio" id="contacttime1" name="contacttime" value="morning">
+                        </p>
+                        <p>
+                            <label for="contacttime2">Afternoon</label>
+                            <input type="radio" id="contacttime2" name="contacttime" value="afternoon">
+                        </p>
+                        <p>
+                            <label for="contacttime3">Evening</label>
+                            <input type="radio" id="contacttime3" name="contacttime" value="afternoon">
+                        </p>
+                        <p>
+                            <label for="asap">ASAP</label>
+                            <input type="checkbox" id="asap" name="asap">
+                        </p>
+                        <p>
+                            <button type="submit">Send</button>
+                        </p>
+                </fieldset>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+#aboutme > p:nth-of-type(odd) {
+    font-weight: bold;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}

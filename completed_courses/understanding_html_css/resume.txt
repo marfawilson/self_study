@@ -1,0 +1,32 @@
+Resume
+Marissa Wilson
+Aspiring Web Developer
+Website: github.com/marfawilson
+Phone: 512-420-6969
+Instagram: @frenchdonut
+
+Howdy! I'm a junior web developer living in Austin, Texas. I'm so excited to be a part of this wonderful world of coding.
+
+Skills
+HTML
+Markup your content with semantic HTML.
+CSS
+Layout your content visually for multiple devices.
+JavaScript
+Make your content more interactive, and build web applications.
+
+Work History
+Team Member
+Whole Foods
+11 years
+
+Portfolio
+
+Hobbies
+Working out
+Reading
+Baking
+
+Mailing Address
+123 Maple Dr.
+Austin, TX 77889
