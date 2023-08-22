@@ -1,2 +1,7 @@
-# udemy_courses
-A collection of Udemy courses I'm currently taking or have completed.
+# Udemy Courses
+
+These are courses I am either:
++ Currently taking, or
++ Have completed (with certificate)
+
+*Thanks for following my coding journey!* 😊
