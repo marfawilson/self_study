@@ -4,7 +4,7 @@ function b() {
     console.log(myVar);// returns undefined (runs third)
 }
 
-// the variables in each function do not 'touch' each other
+// each variable has it's own variable environment as well, so the value of myVar is different depending on the execution stack
 function a() {
     var myVar = 2;
     console.log(myVar);
