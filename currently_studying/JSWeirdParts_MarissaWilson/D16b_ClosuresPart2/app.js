@@ -33,6 +33,8 @@ function buildFunctions2() {
 
     for (var i = 0; i < 3; i++) {
         
+// an IIFE is used on lines 39-43 in order to preserve the scope chain. 
+
         arr.push(
             (function(j) {
                 return function() {
@@ -40,7 +42,8 @@ function buildFunctions2() {
                 }
             }(i))
         );
-        
+
+/* now that the innermost function is contained within a parent function, a new execution context is created. and since we're using an IIFE, the value of j each time it runs is stored in memory, versus before when the value of i was returned at the end of the loop. */
 
     }
 
