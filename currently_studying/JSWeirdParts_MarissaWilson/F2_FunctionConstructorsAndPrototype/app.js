@@ -1,3 +1,6 @@
+// function constructors automatically set the prototype for us
+// it's important to note that the prototype property on a function is NOT the prototype of that function
+// instead, it's the prototype of any objects created if you're using the function as a function constructor
 function Person(firstname, lastname) {
 
     console.log(this);
@@ -12,6 +15,7 @@ Person.prototype.getFullName = function() {
     return this.firstname + ' ' + this.lastname;
 }
 
+// calling the new keyword creates an empty object & sets the prototype of that empty object to the prototype property of the function that you then call
 var usagi = new Person('Usagi', 'Tsukino');
 console.log(usagi);
 
