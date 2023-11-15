@@ -2,6 +2,7 @@
 
 (function(global, $) {
     
+    // 'new' an object
     var Greetr = function(firstName, lastName, language) {
         return new Greetr.init(firstName, lastName, language);
     }
@@ -9,34 +10,41 @@
     // supported langs, greetings & formal greetings we have access to due to lexical environment (not global)
     var supportedLangs = ['en', 'es'];
 
+    // informal greetings
     var greetings = {
         en: 'Hello',
         es: 'Hola'
     };
 
+    // formal greetings
     var formalGreetings = {
         en: 'Salutations',
         es: 'Saludos'
     };
 
+    // logger messages
     var logMessages = {
         en: 'Logged in',
         es: 'Inició sesión'
     }
 
-    // empty object (prototype) for us to store methods onto the Greetr object
+    // prototype for us to store methods onto the Greetr object (saves memory space)
     Greetr.prototype = {
 
+        // 'this' refers to the calling object at execution time
         fullName: function() {
             return this.firstName + ' ' + this.lastName;
         },
 
         validate: function() {
+            // check that the language passed in is supported
+            // references the local variable/array 'supportedLangs' within the closure
             if (supportedLangs.indexOf(this.language) === -1) {
                 throw 'Invalid language';
             }
         },
 
+        // retrieve messages from object by referring to properties using [] syntax (arrays)
         greeting: function() {
             return greetings[this.language] + ' ' + this.firstName + '!';
         },
@@ -45,6 +53,7 @@
             return formalGreetings[this.language] + ', ' + this.fullName(); 
         },
 
+        // chainable methods return their own containing object
         greet: function(formal) {
             var msg;
 
@@ -68,13 +77,13 @@
             if(console) {
                 console.log(logMessages[this.language] + ': ' + this.fullName());
             }
-            return this;
+            return this; // chainable method
         },
 
         setLang: function(lang) {
-            this.language = lang;
-            this.validate();
-            return this;
+            this.language = lang; // set the language
+            this.validate(); // validates the language
+            return this; // chainable method
         },
 
         header: function(selector, formal) {
@@ -86,21 +95,24 @@
 
             var msg;
 
+            // determine the message
             if(formal) {
                 msg = this.formalGreeting();
             } else {
                 msg = this.greeting();
             }
 
+            // inject the message in the chosen place in the DOM
             $(selector).html(msg);
 
+            // chainable method
             return this;
 
         }
 
     };
 
-    // initializing Greetr.init after calling it in the function on line 5 is ok because everything will already be in memory
+    // the actual object is created here, allowing us to 'new' an object without calling 'new' 
     Greetr.init = function(firstName, lastName, language) {
 
         var self = this; // storing 'this' into a variable to avoid confusion later
@@ -110,10 +122,14 @@
         self.lastName = lastName || '';
         self.language = language || 'en';
 
+        self.validate();
+
     }
 
-    Greetr.init.prototype = Greetr.prototype; // objects created with Greetr.init point to Greetr.prototype
+    // trick borrowed from jQuery so we don't have to use the 'new' keyword
+    Greetr.init.prototype = Greetr.prototype;
 
-    global.Greetr = global.G$ = Greetr; // attaching the Greetr function to the global object with an alias
+    // attaching our Greetr to the global object with an alias '$G' for ease of typing
+    global.Greetr = global.G$ = Greetr;
 
 }(window, jQuery));
