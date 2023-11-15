@@ -1,6 +1,6 @@
 // wrapping our library in an IIFE to keep it safe from affecting other code elsewhere
 
-(function(global, $) {
+;(function(global, $) {
     
     // 'new' an object
     var Greetr = function(firstName, lastName, language) {
