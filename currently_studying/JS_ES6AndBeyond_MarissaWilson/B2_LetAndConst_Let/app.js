@@ -1,45 +1,21 @@
-// example 1
+
+let firstname = 'Marissa';
+// let firstname = 'Araceli'; (syntax error: variable has already been declared)
+console.log(firstname); // not on the global object
 
 
-
-// example 2
-
-
-
-// example 3
-
+{
+    // console.log(firstname); reference error: cannot access variable before initialization
+    let firstname = 'Araceli'; // no errors because this variable is in a different lexical enviornment
+    console.log(firstname); // returns 'Araceli' 
+}
 
 
-// example 4
-
-
-
-// example 5
-
-
-
-// example 6
-
-
-
-// example 7
-
-
-
-// example 8
-
-
-
-// example 9
-
-
-
-// example 10
-
-
-
-// example 11
-
-
-
-// example 12
+switch (firstname) {
+    case 'Marissa':
+        let lastname = 'Wilson';
+        break;
+    case 'Araceli':
+        // let lastname = 'Rodriguez'; syntax error: lastname has already been declared
+        break;
+}
