@@ -1,3 +1,6 @@
+// we can pass template literals to functions (tagged template)
+// this allows us to create custom strings
+
 function greet(strings, firstname, lastname) {
     let firstNameType;
 
