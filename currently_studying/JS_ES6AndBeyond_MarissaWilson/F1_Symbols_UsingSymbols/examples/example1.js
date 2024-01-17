@@ -3,7 +3,7 @@
 const grt = Symbol('greet');
 const fname = Symbol('fname');
 
-// each symbol is unique, so even if they have the same 'name',
+// each symbol is unique, so even if they have the same description (key),
 // they are not considered equal
 const grt2 = Symbol('greet');
 console.log(grt === grt2); // returns false
