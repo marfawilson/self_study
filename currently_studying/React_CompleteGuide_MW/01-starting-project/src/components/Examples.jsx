@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-import TabButton from "./TabButton";
-import { EXAMPLES } from "../data";
+import TabButton from './TabButton.jsx';
+import { EXAMPLES } from '../data.js';
+import Section from './Section.jsx';
 
 
 export default function Examples() {
@@ -13,21 +14,20 @@ export default function Examples() {
     }
 
     return (
-        <section id = 'examples'>
-            <h2>Examples</h2>
+        <Section title = 'Examples' id = 'examples'>
             <menu>
                 <TabButton 
                 isSelected={selectedTopic === 'components'} 
-                onSelect = {() => handleSelect('components')}>Components</TabButton>
+                onClick = {() => handleSelect('components')}>Components</TabButton>
                 <TabButton
                 isSelected={selectedTopic === 'jsx'}
-                onSelect = {() => handleSelect('jsx')}>JSX</TabButton>
+                onClick = {() => handleSelect('jsx')}>JSX</TabButton>
                 <TabButton
                 isSelected={selectedTopic === 'props'}
-                onSelect = {() => handleSelect('props')}>Props</TabButton>
+                onClick = {() => handleSelect('props')}>Props</TabButton>
                 <TabButton 
                 isSelected={selectedTopic === 'state'}
-                onSelect = {() => handleSelect('state')}>State</TabButton>
+                onClick = {() => handleSelect('state')}>State</TabButton>
             </menu>
 
         {!selectedTopic ? <p>Please select a topic.</p> : 
@@ -40,6 +40,6 @@ export default function Examples() {
                     </code>
                 </pre>
             </div>)}
-    </section>
+    </Section>
     )
 }
