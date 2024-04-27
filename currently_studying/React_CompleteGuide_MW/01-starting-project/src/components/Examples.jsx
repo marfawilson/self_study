@@ -16,19 +16,9 @@ export default function Examples() {
 
     return (
         <Section title = 'Examples' id = 'examples'>
-            <Tabs>
-                {!selectedTopic ? <p>Please select a topic.</p> : 
-                (<div id = 'tab-content'>
-                    <h3>{EXAMPLES[selectedTopic].title}</h3>
-                    <p>{EXAMPLES[selectedTopic].description}</p>
-                    <pre>
-                        <code>
-                        {EXAMPLES[selectedTopic].code}
-                        </code>
-                    </pre>
-                </div>)}
-            </Tabs>
-            <menu>
+            <Tabs 
+            buttons ={ 
+                <>
                 <TabButton 
                 isSelected={selectedTopic === 'components'} 
                 onClick = {() => handleSelect('components')}>Components</TabButton>
@@ -41,7 +31,19 @@ export default function Examples() {
                 <TabButton 
                 isSelected={selectedTopic === 'state'}
                 onClick = {() => handleSelect('state')}>State</TabButton>
-            </menu>
+                </> 
+            }>
+                {!selectedTopic ? <p>Please select a topic.</p> : 
+                (<div id = 'tab-content'>
+                    <h3>{EXAMPLES[selectedTopic].title}</h3>
+                    <p>{EXAMPLES[selectedTopic].description}</p>
+                    <pre>
+                        <code>
+                        {EXAMPLES[selectedTopic].code}
+                        </code>
+                    </pre>
+                </div>)}
+            </Tabs>
     </Section>
     )
 }
