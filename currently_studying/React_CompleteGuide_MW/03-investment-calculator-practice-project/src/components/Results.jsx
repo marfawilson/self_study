@@ -1,44 +1,23 @@
+import { calculateInvestmentResults } from '../util/investment.js';
+import { formatter } from '../util/investment.js';
+import UserInputs from './UserInputs.jsx';
+
 export default function Results() {
+
     return (
         <table id = 'result'>
             <thead>
+                <tr>
                 <th>Year</th>
-                <th>Investment Value</th>
-                <th>Interest (Year)</th>
-                <th>Total Interest</th>
-                <th>Invested Capital</th>
+                    <td>Investment Value</td>
+                    <td>Interest (Year)</td>
+                    <td>Total Interest</td>
+                    <td>Invested Capital</td>
+                </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>5</td>
                     <td></td>
                     <td></td>
                     <td></td>
