@@ -3,7 +3,9 @@ import { formatter } from '../util/investment.js';
 import UserInputs from './UserInputs.jsx';
 
 export default function Results({ input }) {
-    console.log(input);
+    const resultsData = calculateInvestmentResults(input);
+    console.log(resultsData);
+
     return <p>Results...</p>
 
     // return (
