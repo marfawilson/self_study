@@ -1,4 +1,4 @@
-# Udemy Courses
+# Self-study Courses/Tutorials
 
 These are courses I am either:
 + Currently taking, or
